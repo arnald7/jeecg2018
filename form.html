@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!--Import materialize.css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="js/jquery.mask.min.js"></script>
+  <script src="js/mascara.js"></script>
+
+  <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
+    crossorigin="anonymous"></script>
+
+  <meta charset="UTF-8">
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>JEE-RJ Campo Grande</title>
+</head>
+
+
+<body id="home" class="scrollspy">
+
+
+  <!-- Nav -->
+  <div class="navbar-fixed">
+    <nav class="blue darken-4">
+      <div class="container">
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">JEE-RJ Campo Grande</a>
+          <a href="#" data-target="mobile-nav" class="sidenav-trigger">
+            <i class="material-icons">menu</i>
+          </a>
+
+        </div>
+      </div>
+    </nav>
+  </div>
+
+
+<section id="texto"  class="mag_t-7">
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+        <p class="center-align">Para realizar a inscrição para a JEE 2018 Polo Campo Grande, preencha todos os campos do cadastro abaixo. Ao finalizar clice no botão "Enviar Formulário" para seguir para o pagamento.</p>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="form-home" class="mag_t-7">
+
+  <div class="container">
+<div class="row">
+    <form method="POST" action="captura.php" class="col s12">
+
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="nome_completo" type="text" class="validate" name="nome_completo">
+          <label for="nome_completo">Nome Completo</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s6">
+          <input id="nome_cracha" type="text" class="validate" name="nome_cracha">
+          <label for="nome_cracha">Nome para o Cracha</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="data_nascimento" type="text" class="validate date" name="data_nascimento">
+          <label for="data_nascimento">Data de Nascimento (00/00/0000)</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s8">
+          <input id="endereco" type="text" class="validate" name="endereco">
+          <label for="endereco">Endereço</label>
+        </div>
+        <div class="input-field col s4">
+          <input id="endereco_num" type="text" class="validate" name="endereco_num">
+          <label for="endereco_num">Número</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s8">
+          <input id="complemento" type="text" class="validate" name="complemento">
+          <label for="complemento">Complemento</label>
+        </div>
+        <div class="input-field col s4">
+          <input id="bairro" type="text" class="validate" name="bairro">
+          <label for="bairro">Bairro</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s3">
+          <input id="cep" type="text" class="validate cep" name="cep">
+          <label for="cep">CEP</label>
+        </div>
+        <div class="input-field col s5">
+          <input id="cidade" type="text" class="validate" name="cidade">
+          <label for="cidade">Cidade</label>
+        </div>
+        <div class="input-field col s4">
+          <input id="estado" type="text" class="validate" name="estado">
+          <label for="estado">Estado (Ex.: RJ)</label>
+        </div>        
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="email" type="email" class="validate" name="email">
+          <label for="email">E-mail</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="telefone" type="tel" class="validate phone_ddd" name="telefone">
+          <label for="telefone">Telefone (DDD + Número)</label>
+        </div>
+      </div>
+
+      <div class="row area">
+        <h2 class="col s12">Como soube da JEE?</h2>
+        <div class="input-field col s2">         
+          <label>
+            <input type="radio" class="filled-in" name="como_soube" value="1" />
+            <span>WEB</span>
+          </label>
+        </div>
+        <div class="input-field col s2">
+          <label>
+            <input type="radio" class="filled-in" name="como_soube" value="2" />
+            <span>E_MAIL</span>
+          </label>
+        </div>
+        <div class="input-field col s2">
+          <label>
+            <input type="radio" class="filled-in" name="como_soube" value="3" />
+            <span>RÁDIO</span>
+          </label>
+        </div>
+        <div class="input-field col s2">
+          <label>
+            <input type="radio" class="filled-in" name="como_soube" value="4" />
+            <span>CASA ESPÍRITA</span>
+          </label>
+        </div>
+        <div class="input-field col s2">
+          <label>
+            <input type="radio" class="filled-in" name="como_soube" value="5" />
+            <span>POR OUTRA PESSOA</span>
+          </label>
+        </div>
+        <div class="input-field col s2">
+          <label>
+            <input type="radio" class="filled-in" name="como_soube" value="6" />
+            <span>OUTROS</span>
+          </label>
+        </div>                                        
+      </div>
+      
+
+      <div class="row area">
+        <h2 class="col s12">Frequenta alguma instituição espírita?</h2>
+        <div class="input-field col s2">         
+          <label>
+            <input type="radio" class="filled-in" name="frequenta" value="0" />
+            <span>NÃO</span>
+          </label>
+        </div>
+        <div class="input-field col s2">
+          <label>
+            <input type="radio" class="filled-in" name="frequenta" value="1" />
+            <span>SIM, Qual?</span>
+          </label>
+        </div>
+
+        <div class="input-field col s8">
+          <input id="instituicao" type="text" class="validate" name="nome_frequenta">
+          <label for="instituicao">Instituição</label>
+        </div>
+      </div>
+
+
+      <div class="row area">
+        <h2 class="col s12">Já participou de alguma JEE-Rio?</h2>
+        <div class="input-field col s2">         
+          <label>
+            <input type="radio" class="filled-in" name="japarticipou" value="0" />
+            <span>NÃO</span>
+          </label>
+        </div>
+        <div class="input-field col s2">
+          <label>
+            <input type="radio" class="filled-in" name="japarticipou" value="1" />
+            <span>SIM, Qual?</span>
+          </label>
+        </div>
+        <div class="input-field col s8">
+          <input id="edicao_jeerio" type="text" class="validate" name="qual_japarticipou">
+          <label for="edicao_jeerio">Qual JEE-Rio participou</label>
+        </div>
+      </div>
+
+
+      <div class="row area">
+        <h2 class="col s12">Necessita de algum cuidado especial?</h2>
+        <div class="input-field col s2">         
+          <label>
+            <input type="radio" class="filled-in" name="necessita" value="0" />
+            <span>NÃO</span>
+          </label>
+        </div>
+        <div class="input-field col s2">
+          <label>
+            <input type="radio" class="filled-in" name="necessita" value="1" />
+            <span>SIM, Qual?</span>
+          </label>
+        </div>
+        <div class="input-field col s8">
+          <input id="cuidado" type="text" class="validate" name="qual_necessita">
+          <label for="cuidado">Descreva o cuidado ( Ex.: cadeirante, deficiente visual, etc )</label>
+        </div>
+      </div>
+
+      <div class="row">
+
+        <div class="col s5 area">
+
+          <h2 class="col s12">Diabético?</h2>
+
+          <div class="input-field col s6">         
+            <label>
+              <input type="radio" class="filled-in" name="diabetico" value="0" />
+              <span>NÃO</span>
+            </label>
+          </div>
+
+          <div class="input-field col s6">
+            <label>
+              <input type="radio" class="filled-in" name="diabetico" value="1" />
+              <span>SIM</span>
+            </label>
+          </div>   
+
+        </div>
+
+        <div class="col s5 area right">
+          <h2 class="col s12">Vegetariano?</h2>
+
+          <div class="input-field col s6">         
+            <label>
+              <input type="radio" class="filled-in" name="vegetariano" value="0" />
+              <span>NÃO</span>
+            </label>
+          </div>
+
+          <div class="input-field col s6">
+            <label>
+              <input type="radio" class="filled-in" name="vegetariano" value="1" />
+              <span>SIM</span>
+            </label>
+          </div> 
+
+        </div>
+
+      </div>
+
+
+
+      <div id="dezanos" class="row area ocultar">
+        <h2 class="col s12">Confirme se é Criança até 10 anos?</h2>
+        <p class="center-align">A data de nascimento é <span class="dtn"></span></p>
+
+        <div class="input-field col s4">         
+          <label>
+            <input type="radio" class="filled-in" name="desconto" value="0" />
+            <span>NÃO</span>
+          </label>
+        </div>
+
+        <div class="input-field col s4">
+          <label>
+            <input type="radio" class="filled-in" name="desconto" value="1" />
+            <span>Criança até 10anos</span>
+          </label>
+        </div>
+
+      </div>
+
+
+      <div id="trabalhador" class="row area">
+        <h2 class="col s12">Trabalhador do evento?</h2>
+
+        <div class="input-field col s4">         
+          <label>
+            <input type="radio" class="filled-in" name="desconto" value="0" />
+            <span>NÃO</span>
+          </label>
+        </div>
+
+
+        <div class="input-field col s4">
+          <label>
+            <input type="radio" class="filled-in" name="desconto" value="2" />
+            <span>Trabalhador</span>
+          </label>
+        </div>
+
+      </div>
+
+
+      <div class="row">
+        <div class="col s12">
+          <input type="submit" title="Enviar" alt="Enviar" value="Enviar Formulário" class="btAcessar">
+        </div>
+      </div>
+
+    </form>
+  </div>
+  </div>
+  
+</section>
+
+
+
+
+
+
+
+  <!-- Footer -->
+  <footer class="section blue darken-4 white-text center">
+    <p class="flow-text">JEE-RJ CG &copy; 2018 </p>
+  </footer>
+
+  <!--JavaScript at end of body for optimized loading-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+  <script>
+    // Sidenav
+    const sideNav = document.querySelector('.sidenav');
+    M.Sidenav.init(sideNav, {});
+
+    // Slider
+    const slider = document.querySelector('.slider');
+    M.Slider.init(slider, {
+      indicators: false,
+      height: 500,
+      transition: 500,
+      interval: 6000
+    });
+
+    // Autocomplete
+    const ac = document.querySelector('.autocomplete');
+    M.Autocomplete.init(ac, {
+      data: {
+        "Aruba": null,
+        "Cancun Mexico": null,
+        "Hawaii": null,
+        "Florida": null,
+        "California": null,
+        "Jamacia": null,
+        "Europe": null,
+      }
+    });
+
+    // Material Boxed
+    const mb = document.querySelectorAll('.materialboxed');
+    M.Materialbox.init(mb, {});
+
+    // ScrollSpy
+    const ss = document.querySelectorAll('.scrollspy');
+    M.ScrollSpy.init(ss, {});
+
+  </script>
+
+  <script>
+    $(document).ready(function(){
+
+      $('#data_nascimento').focusout(function(){
+        var datanas = $('#data_nascimento').val();
+
+
+      function calculateAge(dobString) {
+  //    var dob = new Date(dobString);
+      var dob = dobString;
+
+          // O formato da data contida na variável "data" é dd/mm/yyyy
+          split = dob.split('/');
+          novadata = split[2]+ "-" +split[1]+ "-" +split[0];
+          dob = new Date(novadata);
+
+          var currentDate = new Date();
+          var currentYear = currentDate.getFullYear();
+          var birthdayThisYear = new Date(currentYear, dob.getMonth(), dob.getDate());
+          var age = currentYear - dob.getFullYear();
+            if(birthdayThisYear > currentDate) {
+              age--;
+            }
+
+              return age;
+
+          }
+
+
+          idade = calculateAge(datanas);
+
+            if(idade <= 10 ){
+
+              $("#dezanos").removeClass("ocultar");
+              $("#trabalhador").addClass("ocultar");
+              $(".dtn").text(datanas);
+            //  console.log(datanas);
+          
+            }
+            
+           // console.log(idade);
+           
+          // alert(calculateAge(datanas)); 
+
+          });
+
+  });
+
+
+  </script>
+
+
+</body>
+
+</html>

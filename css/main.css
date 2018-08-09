@@ -1,0 +1,69 @@
+body { font-family: 'Open Sans', sans-serif; color: #505050; }
+
+h2 {font-size: 2.3em; font-weight:800; margin: 2% 0 0 0; color: #505050;
+	text-transform: uppercase; letter-spacing: -1px; text-align: center; }
+
+input:not([type]), input[type=text]:not(.browser-default),
+input[type=password]:not(.browser-default), input[type=email]:not(.browser-default),
+input[type=url]:not(.browser-default), input[type=time]:not(.browser-default),
+input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default),
+input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default),
+input[type=number]:not(.browser-default), input[type=search]:not(.browser-default),
+textarea.materialize-textarea { font-size: 2em; }
+
+.ocultar { display: none; }
+.mostrar { display: block; }
+
+.dtn{ font-weight: bold; }
+
+.input-field>label { font-size: 1.3em; }
+
+#texto p { font-size: 1.3em; font-weight: 700; }
+
+
+.area { border:1px solid #9e9e9e; padding: 0 1em; margin: 2em 0; border-radius: 10px;}
+.area .col { height: 50px; }
+
+.btAcessar {
+    background-color: #ffd700;
+    border-radius: 0.125rem;
+    border-color: transparent;
+    color: #960000;
+    transition: color 210ms ease;
+    cursor: pointer;
+    margin: .85rem 0 3.3rem;
+    transition: box-shadow 610ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
+    margin-bottom: 2em;
+    display: table;
+    height: 4.0625rem;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    font-size: 2.313em;
+    font-weight: 800;
+}
+
+/*------------------------------*/
+
+.mag_t-1 { margin-top: 1%; }
+.mag_t-2 { margin-top: 2%; }
+.mag_t-3 { margin-top: 3%; }
+.mag_t-4 { margin-top: 4%; }
+.mag_t-5 { margin-top: 5%; }
+.mag_t-6 { margin-top: 6%; }
+.mag_t-7 { margin-top: 7%; }
+.mag_t-8 { margin-top: 8%; }
+.mag_t-9 { margin-top: 9%; }
+.mag_t-10 { margin-top: 10%; }
+
+
+.pad_t-1 { padding-top: 1%; }
+.pad_t-2 { padding-top: 2%; }
+.pad_t-3 { padding-top: 3%; }
+.pad_t-4 { padding-top: 4%; }
+.pad_t-5 { padding-top: 5%; }
+.pad_t-6 { padding-top: 6%; }
+.pad_t-7 { padding-top: 7%; }
+.pad_t-8 { padding-top: 8%; }
+.pad_t-9 { padding-top: 9%; }
+.pad_t-10 { padding-top: 10%; }
