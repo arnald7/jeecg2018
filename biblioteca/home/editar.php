@@ -1,8 +1,6 @@
 <?php include('../include/header.php'); ?>
 
-
-
-	<h1>Biblioteca - Editar de Livros</h1>
+	<h1>Cadastro - Editar</h1>
 
 	<?php
 /*
@@ -25,8 +23,6 @@
 		header("Location: index.php");
 	}	
 
-	
-
 	if ( !empty($_POST)) {
 		// keep track validation errors
 		$tituloError = null;
@@ -41,38 +37,36 @@
  		$edicao 	= $_POST['edicao'];
  		$isbn 		= $_POST['isbn'];
  		$quant 		= $_POST['quant'];
-
 								
-		// validate input
-		$valid = true;
-		if (empty($titulo)) {
-			$tituloError = 'Please enter Titulo';
-			$valid = false;
-		}
-		
-		if (empty($autor)) {
-			$autorError = 'Please enter Autor';
-			$valid = false;
-		} 
-		
-		if (empty($quant) || $quant<1) {
-			$quantError = 'Please enter Quantidade';
-			$valid = false;
-		}
-
-		
-		// update data
-		if ($valid) {
-			$table		= 'livros';
-			$atualizar = new Livros();
-			$atualizar->updateData($titulo, $autor, $espirito, $editora, $edicao, $isbn, $quant, $table, $id);
-			header("Location: index.php?status_insert=success"); 
-		}
+			// validate input
+			$valid = true;
+			if (empty($titulo)) {
+				$tituloError = 'Please enter Titulo';
+				$valid = false;
+			}
+			
+			if (empty($autor)) {
+				$autorError = 'Please enter Autor';
+				$valid = false;
+			} 
+			
+			if (empty($quant) || $quant<1) {
+				$quantError = 'Please enter Quantidade';
+				$valid = false;
+			}
+			
+			// update data
+			if ($valid) {
+				$table		= 'cadastro';
+				$atualizar = new Inscricao();
+				$atualizar->updateData($titulo, $autor, $espirito, $editora, $edicao, $isbn, $quant, $table, $id);
+				header("Location: index.php?status_insert=success"); 
+			}
 
 		} else {
 		
-			$editarId = new Livros();
-			extract($editarId->selectDataforId($_REQUEST['id'],"livros"));	
+			$editarId = new Inscricao();
+			extract($editarId->selectDataforId($_REQUEST['id'],"cadastro"));	
 
 		}
 
@@ -81,7 +75,7 @@
 
 					<form class="form-horizontal" action="editar.php?id=<?php echo $id?>" method="post">
 					  <div class="control-group <?php echo !empty($tituloError)?'error':'';?>">
-					    <label class="control-label">Titulo</label>
+					    <label class="control-label">Nome</label>
 					    <div class="controls">
 					      	<input name="titulo" type="text"  value="<?php echo !empty($titulo)?$titulo:'';?>">
 					      	<?php if (!empty($tituloError)): ?>

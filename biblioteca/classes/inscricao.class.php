@@ -38,7 +38,7 @@
 
 		function listaInscricao() // Lista inscritos
 		{
-			$sth = $this->db->prepare("SELECT * from cadastro");
+			$sth = $this->db->prepare("SELECT * from cadastro order by dtinscricao DESC");
 			$sth->execute();
 
 			echo '
@@ -51,7 +51,7 @@
 		                  <th>Endereço</th>
 		                  <th>Bairro</th>
 		                  <th>CEP</th>
-		                  <th>Cidade</th>
+		                  <th>Situação</th>
 		                  <th></th>
 		                </tr>
 		              </thead>
@@ -61,14 +61,14 @@
 				echo '<tr>';
 			//	echo '<td>'. utf8_encode( $row['titulo'] ) . '</td>';
 			//	echo '<td>'. utf8_encode( $row['autor']  ) . '</td>';
-				echo '<td>'. ( $row['nome'] ) . '</td>';
-				echo '<td>'. ( $row['cracha']  ) . '</td>';
+				echo '<td>'. utf8_encode( $row['nome'] ) . '</td>';
+				echo '<td>'. utf8_encode( $row['cracha']  ) . '</td>';
 				echo '<td>'. ( $row['dtnascimento']  ) . '</td>';
-				echo '<td>'. ( $row['endereco']  ) . '</td>';
-				echo '<td>'. ( $row['bairro']  ) . '</td>';
+				echo '<td>'. utf8_encode( $row['endereco']  ) . '</td>';
+				echo '<td>'. utf8_encode( $row['bairro']  ) . '</td>';
 				echo '<td>'. ( $row['cep']  ) . '</td>';
-				echo '<td>'. ( $row['cidade']  ) . '</td>';
-				echo '<td><button class="btn"><a href="editar.php?id='.($row['id_cad']).'">Editar</a></button>&nbsp;&nbsp;<button class="btn"><a href="index.php?del_id='.($row['id_cad']).'">Delete</a></button></td>';
+				echo '<td>'. utf8_encode( $row['cidade']  ) . '</td>';
+				echo '<td><button class="btn"><a href="editar.php?id='.($row['id_cad']).'">Editar</a></button>&nbsp;&nbsp;</td>';
 				echo '</tr>';
 			}
 
@@ -95,7 +95,7 @@
 
 		function selectDataforId($id, $table)
 		{
-			$sql="SELECT * FROM $table WHERE id = $id";
+			$sql="SELECT * FROM $table WHERE id_cad = $id";
 			$q = $this->db->prepare($sql);
 			$q->execute(array($id));
 			$data = $q->fetch(PDO::FETCH_ASSOC);
