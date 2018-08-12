@@ -99,6 +99,7 @@
 			$q = $this->db->prepare($sql);
 			$q->execute(array($id));
 			$data = $q->fetch(PDO::FETCH_ASSOC);
+			var_dump($data);
 			return $data;
 		}
 
