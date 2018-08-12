@@ -68,6 +68,10 @@
 			$editarId = new Inscricao();
 			extract($editarId->selectDataforId($_REQUEST['id'],"cadastro"));	
 
+			echo $nome;
+			
+
+
 		}
 
 
@@ -77,7 +81,7 @@
 					  <div class="control-group <?php echo !empty($tituloError)?'error':'';?>">
 					    <label class="control-label">Nome</label>
 					    <div class="controls">
-					      	<input name="titulo" type="text"  value="<?php echo !empty($titulo)?$titulo:'';?>">
+					      	<input name="titulo" type="text"  value="<?php echo !empty($nome)?$nome:'';?>">
 					      	<?php if (!empty($tituloError)): ?>
 					      		<span class="help-inline"><?php echo $tituloError;?></span>
 					      	<?php endif; ?>
