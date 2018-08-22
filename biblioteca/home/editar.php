@@ -66,10 +66,12 @@
 		} else {
 		
 			$editarId = new Inscricao();
-			extract($editarId->selectDataforId($_REQUEST['id'],"cadastro"));	
+			extract($editarId->selectDataforId($_REQUEST['id'],"cadastro"));
 
-			echo $nome;
-			
+			$myDateTime = DateTime::createFromFormat('Y-m-d', $dtnascimento);
+			$formatdtnascimento = $myDateTime->format('d/m/Y');
+
+
 
 
 		}
@@ -78,6 +80,11 @@
 ?>
 
 					<form class="form-horizontal" action="editar.php?id=<?php echo $id?>" method="post">
+
+<div class="row">
+
+<div class="col-sm-6 col-md-6 col-lg-6">
+
 					  <div class="control-group <?php echo !empty($tituloError)?'error':'';?>">
 					    <label class="control-label">Nome</label>
 					    <div class="controls">
@@ -86,22 +93,29 @@
 					      		<span class="help-inline"><?php echo $tituloError;?></span>
 					      	<?php endif; ?>
 					    </div>
-					  </div>
+						</div>
+						
 					  <div class="control-group <?php echo !empty($autorError)?'error':'';?>">
-					    <label class="control-label">Autor</label>
+					    <label class="control-label">Cracha</label>
 					    <div class="controls">
-					      	<input name="autor" type="text" placeholder="Autor" value="<?php echo !empty($autor)?$autor:'';?>">
+					      	<input name="autor" type="text" placeholder="Autor" value="<?php echo !empty($cracha)?$cracha:'';?>">
 					      	<?php if (!empty($autorError)): ?>
 					      		<span class="help-inline"><?php echo $autorError;?></span>
 					      	<?php endif;?>
 					    </div>
-					  </div>
+						</div>
+						
 					  <div class="control-group">
-					    <label class="control-label">Espirito</label>
+					    <label class="control-label">Data de Nascimento</label>
 					    <div class="controls">
-					      	<input name="espirito" type="text"  placeholder="Espirito" value="<?php echo !empty($espirito)?$espirito:'';?>">
+					      	<input name="dtnascimento" type="text"  placeholder="data de nascimento" value="<?php echo !empty($formatdtnascimento)?$formatdtnascimento:'';?>">
 					    </div>
-					  </div>
+						</div>
+
+</div>
+
+<div class="col-sm-6 col-md-6 col-lg-6">
+
 					  <div class="control-group">
 					    <label class="control-label">Editora</label>
 					    <div class="controls">
@@ -128,11 +142,19 @@
 					      		<span class="help-inline"><?php echo $quantError;?></span>
 					      	<?php endif;?>
 					    </div>
-					  </div>					  
+						</div>
+
+</div>
+
+</div>
+
+			
+											  
 					  <div class="form-actions">
 						  <button type="submit" class="btn btn-success">Create</button>
 						  <a class="btn" href="index.php">Back</a>
 						</div>
+						
 					</form>	
 	
 	
